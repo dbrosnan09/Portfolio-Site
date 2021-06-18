@@ -1,0 +1,1056 @@
+
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+.header {
+    width:100%;
+    height:60px;
+    display:flex;
+align-items: center;
+    justify-content: space-evenly;
+position:fixed;
+background:white;
+border-bottom: 3px solid #dedede;
+backdrop-filter: blur(7px);
+    opacity: .97;
+    z-index:9000;
+}
+
+.header_obj {
+    font-family:'Alegreya Sans';
+    font-size:20px;
+    padding-bottom: 5px;
+    position: relative;
+
+}
+
+body {
+    margin:0px;
+}
+
+
+
+.portfolio_ul:after {
+      content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+
+transition:1s;
+  background:#006bc7;
+    
+
+}
+
+
+.home_ul:after {
+      content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+
+transition:1s;
+  background:#006bc7;
+    
+
+}
+
+.contact_ul:after {
+      content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+
+transition:1s;
+  background:#006bc7;
+    
+
+}
+
+
+.portfolio_ul_underline:after {
+      content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+width:100%;
+transition:1s;
+  background:#006bc7;
+    
+
+}
+
+
+.home_ul_underline:after {
+      content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+width:100%;
+transition:1s;
+  background:#006bc7;
+    
+
+}
+
+.contact_ul_underline:after {
+      content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+width:100%;
+transition:1s;
+  background:#006bc7;
+    
+
+}
+
+
+.about_container {
+   background: #f7f7f7;
+    height: 100vh;
+
+}
+
+.about {
+    width:1000px;
+    margin:auto;
+}
+
+.about_flex {
+    display:flex;
+    height:100%;
+
+}
+.about_half {
+width:50%;
+}
+
+
+.name_prof_flex {
+ display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    font-family:'Alegreya Sans';
+
+}
+
+.name {
+    
+     font-size: max(7vw, 30px);
+    font-weight: 500;
+
+}
+.prof {
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+.about_pic_flex {
+    display:flex;
+}
+.second_half_flex {
+    display:flex;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    align-content: stretch;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_grid {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.first_back{
+       background: #f7f7f7;
+    height: 100vh;
+    transition:.45s;
+    z-index:100;
+}
+
+.first_back_opaque{
+    position:absolute;
+
+       background: #f7f7f7;
+   
+    transition:.45s;
+    opacity:0;
+            background: linear-gradient(
+682deg
+, #ece659 -12%, #006bc7 71%);
+    color: white;
+   z-index:8000;
+    width:100%;
+    transition-timing-function:ease-out;
+    height:100%;
+    top:0;
+}
+
+.hc_box:hover {
+  box-shadow:  0 0 3px grey;
+
+    transform: scale(1.02);
+}
+
+
+.mood_box:hover {
+    box-shadow:  0 0 3px grey;
+      transform: scale(1.02);
+  
+}
+
+.first_flex {
+    display:flex;
+    height:100vh;
+    flex-direction:column;
+    align-items:center;
+
+
+}
+.white {
+    background:white;
+}
+.video_flex {
+    display:flex;
+    height:100%;
+        align-items: center;
+    justify-content: space-around;
+
+
+
+}
+
+
+
+
+.mood_title_box {
+  display:flex;
+  flex-direction:column;
+  font-family:'Montserrat';
+  color:white;
+  
+}
+
+.hl_title_box {
+    font-family:'Alegreya Sans';
+    color:black;
+}
+
+.mood_titler {
+ font-size:125px;
+  font-weight:600;
+  align-self:flex-start;
+}
+
+
+
+.mood_subtitle {
+  font-size:28px;
+  font-weight:400;
+  align-self:flex-end;
+  position:relative;
+  top:-30px;
+  right:.5vw;
+
+}
+
+.titler {
+  font-family:'Alegreya Sans';
+  font-weight:600;
+  text-decoration:underline;
+  font-size:50px;
+  text-align:center;
+
+  right:0;
+  left:0;
+  top:40px;
+}
+
+
+    .prof_select_back {
+      height:calc(100vh - 63px);
+      background:#f7f7f7;
+      min-height:480px;
+    }
+
+
+
+        .mood_back {
+     
+               background: linear-gradient( 
+147deg
+ , #FF0146 38%, #d5fd75 109%);
+ opacity:1;
+ transition:2s;
+ 
+    }
+    
+.hl_back {
+    background:white;
+}
+
+    .prof_select_flex {
+      display:flex;
+      height:calc(100vh - 63px);
+      width:100%;
+      justify-content:space-around;
+      align-items:center;
+      flex-wrap:wrap;
+      min-height:480px;
+    }
+    
+    .hc_box {
+      width:100%;
+      height: 35vh;
+      border-radius:10px;
+      border: 1px solid black;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:white;
+      min-height:150px;
+      max-height:600px;
+      min-width:500px;
+         transition:.6s;
+    }
+
+
+.vid_fit {
+  
+}
+
+
+  
+    .hc_text {
+      font-size:5vw;
+      font-family:'Alegreya Sans';
+      font-weight:600;
+    }
+    .mood_box {
+      flex-basis:40%;
+      height: 35vh;
+      border-radius:10px;
+      border: 1px solid #fd8375;
+      display:flex;
+      align-items:center;
+      min-height:150px;
+      justify-content:center;
+          background: linear-gradient(
+682deg
+, #ece659 -16%, #fd8375 144%);
+            max-height:600px;
+      min-width:500px;
+      transition:.6s;
+
+}
+
+   .spacer {
+       height:63px;
+   }
+
+    .prof_select_flex a{
+      text-decoration:none;
+      color:black;
+      flex-basis:40%;
+      margin:20px;
+    }
+
+.mood_container {
+    max-width:1000px;
+    margin:auto;
+}
+
+.mood_head {
+    font-size:70px;
+}
+
+.mood_pad {
+ 
+    width:214px;
+    padding-top:40px;
+
+}
+
+.main_sub {
+    top:-17px;
+    font-size:20px;
+}
+
+.mood_back_container {
+    max-width:1000px;
+    margin:auto;
+    transition:1s;
+    opacity:0;
+
+}
+
+.hl_back_container {
+    max-width:1000px;
+    margin:auto;
+    transition:2s;
+    
+
+}
+
+
+.mm_flex {
+    display:flex;
+ 
+flex-direction:row;
+flex-wrap:wrap;
+    align-items: center;
+    align-content: space-around;
+    padding-top: 82px;
+    padding-bottom: 150px;
+}
+
+
+
+.pic_half {
+
+}
+
+.pic_exp {
+    width:100%;
+    border-radius:5px;
+
+}
+
+.exp {
+padding-top:50px;
+
+  
+    
+}
+
+
+.mood_text {
+     font-size: 17px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: white;
+    line-height: 34px;
+}
+
+.hl_text {
+    font-family:'Alegreya Sans';
+    color:black;
+    font-size:19px;
+    font-weight:400;
+}
+
+.mm_half {
+    width:100%;
+    display:flex;
+    align-items: stretch;
+}
+
+
+.mm_half_text {
+    width:100%;
+  
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    font-family:'Montserrat';
+    font-weight:400;
+    font-size:17px;
+    color:white;
+    justify-content: space-around;
+}
+
+.hl_half_text {
+    font-family:'Alegreya Sans';
+    color:black;
+}
+
+.feature_line {
+    line-height:25px;
+    font-size:15px;
+    width:55%;
+}
+
+.bold {
+    font-weight:800;
+
+}
+
+.hl_head{
+    font-family:'Alegreya Sans';
+        font-size: 50px;
+    padding-top: 50px;
+    white-space: nowrap;
+  overflow: hidden;
+  
+   width:0;
+  
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.hl_flex {
+    height:500px;
+}
+
+.hl_half {
+    height:100%;
+}
+
+.hl_pic {
+    align-self:center;
+        
+}
+
+.hl_pic_img {
+        box-shadow: 0 0 2px grey;
+}
+
+.hlf {
+    font-size:17px;
+}
+
+.contact_back {
+   background: linear-gradient( 
+682deg
+ , #ece659 -12%, #006bc7 71%);
+}
+
+.underliner {
+    width:100%;
+}
+
+.header_obj a:hover {
+    text-decoration:none;
+
+}
+
+.header_obj a {
+    color:black;
+    text-decoration:none;
+}
+.header_obj a:visited {
+    color:black;
+    text-decoration:none;
+}
+
+
+.contact_back {
+
+}
+
+.contact_flex {
+  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+}
+
+.contact_container {
+color:white;
+font-family:"Alegreya Sans";
+display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-around;
+    align-items:flex-start;
+}
+
+.name_cont {
+    font-size:70px;
+    font-family:'Alegreya Sans';
+    font-weight:600;
+}
+
+.profession {
+    font-size:29px;
+    font-family:'Alegreya Sans';
+    font-weight:400;
+}
+
+
+.email_cap {
+    font-weight:bold;
+    font-size:32px;
+}
+
+.email {
+
+    font-weight:normal;
+}
+
+.linked_in_cap {
+    font-weight:bold;
+    font-size:32px;
+}
+
+.linked_in {
+
+}
+
+.linked_in a{
+    color:white;
+    font-size:20px;
+}
+
+
+.linked_in a:visited{
+    color:white;
+}
+
+
+.email a {
+    color:white;
+    font-size:20px;
+}
+
+.email a:visited {
+    color:white;
+}
+
+.contact_back {
+          height:calc(100vh - 63px);
+
+}
+
+.email_flex {
+    display:flex;
+align-items:center;
+flex-direction:column;
+align-items:flex-start;
+}
+
+.linked_in_flex {
+    display:flex;
+    align-items:flex-start;
+    flex-direction:column;
+
+}
+
+
+.blinker {
+color:transparent;
+background:white;
+transition:.5s;
+display:inline;
+animation: blinked .5s infinite;
+}
+
+.home_flex {
+    display:flex;
+}
+
+@keyframes blinked {
+  from {background: white;}
+  to {background: transparent;}
+}
+
+
+    @media only screen and (max-width: 1150px) {
+    .hc_text {
+    font-size:64px;
+  }
+  
+}
+    
+      @media only screen and (max-height: 480px) {
+    .titler {
+    position:static;
+      padding-top:30px;
+  }
+  
+}
+
+
+
+
+}
+@media screen and (min-width: 1190px) {
+  .name {
+     font-size: 85px;
+  }
+    .prof {
+     font-size: 35px;
+  }
+}
+@media screen and (max-width: 1000px) {
+.mm_half {
+    flex-wrap:wrap;
+}
+
+.pic_exp {
+    width:50%;
+}
+
+
+}
+
+@media screen and (max-width: 777px) {
+.mm_half {
+    flex-wrap:wrap;
+}
+
+video {
+    height:40%;
+}
+
+
+}
+
+</style>
+
+</head>
+<body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+<script>
+
+
+$( document ).ready(function() {
+
+
+
+$( "#mouse_head" ).mouseover(function() {
+       $('.first_back').toggleClass('title_change')
+   $('.first_back_opaque').css('opacity', 1)
+});
+});
+</script>
+
+<script>
+
+var scrollHandling = {
+    allow: true,
+    reallow: function() {
+        scrollHandling.allow = true;
+    },
+    delay: 200 //(milliseconds) adjust to the highest acceptable value
+};
+
+
+
+$(window).scroll(function() {
+
+    if(scrollHandling.allow) {
+    var top_of_element = $("#mood_cont").offset().top;
+    var bottom_of_element = $("#mood_cont").offset().top + $("#mood_cont").outerHeight();
+    var top_of_screen = $(window).scrollTop();
+    var bottom_of_screen = top_of_screen + $(window).height() - $(window).height()/4;
+    
+
+    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+        $('.mood_back_container').css('opacity',1)
+    } else {
+        // the element is not visible, do something else
+    }
+    }
+});
+
+</script>
+<script>
+
+var scrollHandling = {
+    allow: true,
+    reallow: function() {
+        scrollHandling.allow = true;
+    },
+    delay: 200 //(milliseconds) adjust to the highest acceptable value
+};
+
+
+$(window).scroll(function() {
+      if(scrollHandling.allow) {
+    var top_of_element = $("#hl_title").offset().top;
+    var bottom_of_element = $("#hl_title").offset().top + $("#hl_title").outerHeight();
+    var top_of_screen = $(window).scrollTop();
+    var bottom_of_screen = top_of_screen + $(window).height() - $(window).height()/4;
+    
+
+    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+        $('.hl_head').css('animation',"typing 3.5s steps(40, end)")
+                $('.hl_head').css('width',"100%")
+
+    } else {
+        // the element is not visible, do something else
+    }
+      }
+});
+
+</script>
+
+
+
+<script>
+
+var scrollHandling = {
+    allow: true,
+    reallow: function() {
+        scrollHandling.allow = true;
+    },
+    delay: 500 //(milliseconds) adjust to the highest acceptable value
+};
+
+
+$(window).scroll(function() {
+      if(scrollHandling.allow) {
+    var top_of_portfolio = $("#port_start").offset().top;
+    var top_of_contact = $("#contact").offset().top;
+
+    var top_of_screen = $(window).scrollTop();
+    var bottom_of_screen = top_of_screen + $(window).height() - $(window).height()/4;
+    console.log("Bottom of screen is" + bottom_of_screen)
+    console.log("Top of portfolio is" + top_of_portfolio)
+    console.log("Top of contact is " + top_of_contact);
+
+    if (bottom_of_screen < top_of_portfolio){
+            $('.home_ul').addClass('home_ul_underline')
+        $('.portfolio_ul').removeClass('portfolio_ul_underline')
+        $('.contact_ul').removeClass('contact_ul_underline')
+
+    } else if ((bottom_of_screen > top_of_portfolio) && (bottom_of_screen < top_of_contact)) {
+        $('.home_ul').removeClass('home_ul_underline')
+        $('.portfolio_ul').addClass('portfolio_ul_underline')
+        $('.contact_ul').removeClass('contact_ul_underline')
+
+    }
+    else {
+            $('.home_ul').removeClass('home_ul_underline')
+        $('.portfolio_ul').removeClass('portfolio_ul_underline')
+        $('.contact_ul').addClass('contact_ul_underline')
+    }
+
+
+
+      }
+});
+
+</script>
+
+
+
+
+<script>
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 63);
+});
+</script>
+
+
+<div class='header'>
+<div id='home_underline' class='header_obj home_ul home_ul_underline'>
+<a href='#home_point'>Home</a>
+</div>
+<div id='port_underline' class='header_obj portfolio_ul'>
+<a href='#port_start'>Portfolio</a>
+</div>
+<div id='contact_underline' class='header_obj contact_ul'>
+<a href='#contact'>Contact</a>
+</div>
+</div>
+<div class='home_flex'>
+<div id='home_point' class='first_back'>
+<div class='first_flex'>
+<div class='name_prof_flex'>
+<div class='name'>
+David Brosnan
+</div>
+<div class='prof'>
+Full Stack Developer Django/Python
+</div>
+</div>
+
+
+
+
+</div>
+
+<div id='mouse_head' class='first_back_opaque'>
+<div class='first_flex'>
+<div class='name_prof_flex'>
+<div class='name'>
+David Brosnan
+</div>
+<div class='prof'>
+Full Stack Developer Django/Python
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+<div class='first_back white'>
+<div class='video_flex'>
+
+<video class='vid_fit' height="60%" autoplay muted loop>
+  <source src="{% static 'vid_edit.mp4' %}" type="video/mp4">
+
+  Your browser does not support the video tag.
+</video>
+
+</div>
+</div>
+
+</div>
+<div id='port_start' class='prof_select_back'>
+
+      <div class='prof_select_flex'>
+                <a href='https://mood.pythonanywhere.com'><div class='mood_box'>
+          <div class='mood_title_box'>
+            <div class='mood_title_box'>
+              <div class='mood_titler'>
+                   mood</div>
+              <div class='mood_subtitle'>
+                spotify playlists
+              </div>
+            </div>
+          </div>
+        </div></a>
+        <a href='https://www.hlcompare.com'><div class='hc_box'>
+          <div class='hc_text'>
+            headline compare
+          </div>
+          </div></a>
+        
+
+        
+      </div>
+    </div>
+
+
+<div id='mood_cont' class='mood_back'>
+          <div class='mood_back_container'>
+            <div class='mood_title_box mood_pad'>
+              <div class='mood_titler mood_head'>
+                   mood</div>
+              <div class='mood_subtitle main_sub'>
+                spotify playlists
+              </div>
+            </div>
+              <div class='exp mood_text'>
+            Generate mood playlists (Loud, Quiet, High Tempo, Low Tempo, Popular…) by artist. Add to your Spotify with one click.
+            </div>
+            <div class='mm_flex'>
+            <div class='mm_half'>
+            <div class='pic_half'>
+            <img src="{% static 'mood_shot.png' %}" class='pic_exp'>
+     
+            </div>
+                <div class='mm_half_text'>
+                <div class='feature_line'><div class='bold'>API</div> server and client authentication, artist picture, track fetching and playlist creation through Spotify API
+</div>
+                <div class='feature_line'><div class='bold'>Scripting</div> automated song classification by mood using Spotify API track information</div>
+                                <div class='feature_line'><div class='bold'>Responsive Design</div> media query, jQuery and JavaScript powered</div>
+
+
+            </div>
+            </div>
+
+
+
+
+          </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class='hl_back'>
+          <div class='hl_back_container'>
+         
+              <div id='hl_title' class='mood_titler mood_head hl_head'>
+                   headline compare</div>
+            
+            
+              <div class='exp mood_text hl_text'>
+Visually compare newspaper headlines. Based on a custom scraper feeding databases powering hundreds of scripted graphs and tables.            </div>
+            <div class='mm_flex hl_flex'>
+            <div class='mm_half hl_half'>
+            <div class='pic_half hl_pic'>
+            <img src="{% static 'hl_main.png' %}" class='pic_exp hl_pic_img'>
+     
+            </div>
+                <div class='mm_half_text hl_half_text'>
+                <div class='feature_line hlf'><div class='bold'>Plotly</div> automated generation and styling of hundreds of Plotly graphs
+</div>
+                <div class='feature_line hlf'><div class='bold'>Scripting</div> custom headline emotion analyzer, headline scraper and caching</div>
+                                <div class='feature_line hlf'><div class='bold'>Database</div> Django class-based database models (PostgreSQL) storing headlines and precalculations</div>
+                                <div class='feature_line hlf'><div class='bold'>Design</div> simple, multi-tiered jQuery tab design; access to dozens of visuals per page</div>
+
+
+            </div>
+            </div>
+
+
+
+
+          </div>
+</div>
+
+
+</div>
+
+
+<div id='contact' class='contact_back'>
+<div class='contact_flex'>
+<div class='contact_container'>
+<div>
+<div class='name_cont'>David Brosnan</div>
+<div class='profession'>Full Stack Developer Python/Django</div></div>
+<div class='email_flex'><div class='email_cap'>Email</div><div class='email'><a href='mailto:davidwbrosnan@gmail.com'>davidwbrosnan@gmail.com</a></div></div>
+<div class='linked_in_flex'><div class='linked_in_cap'>LinkedIn</div><div class='linked_in'><a href='https://www.linkedin.com/in/david-brosnan-52235325/'>https://www.linkedin.com/in/david-brosnan-52235325/</a></div></div>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+     
+</body>
+
+</html>

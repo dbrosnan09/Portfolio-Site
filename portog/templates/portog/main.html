@@ -1,0 +1,345 @@
+{% load staticfiles %}
+
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;1,100&amp;family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+.over_grid {
+    display:grid;
+    grid-template-columns:500px;
+
+    row-gap:11px;
+    
+
+}
+
+.half_grid {
+    width:500px;
+    display:grid;
+    grid-template-rows:180px ;
+
+}
+
+
+.site_title {
+ border-radius:10px;
+
+ box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+height:100%;
+}
+
+.site_markers {
+   
+}
+
+.mood_header {
+    font-family:'Montserrat';
+    font-size:50px;
+    color:white;
+    background:
+}
+
+.mood_back {
+    background: linear-gradient(
+682deg
+, #ece659 -16%, #ff8ab3 144%);
+border-radius:10px;
+border-color:#ab685e;
+
+
+}
+
+.mood_title_container {
+    font-family:'Montserrat';
+    color:white;
+    font-weight:500;
+}
+
+.mood_title {
+    font-size:115px;
+    font-weight:700;
+}
+
+.mood_subtitle {
+    font-size:33px;
+        padding-right: 6px;
+    position: relative;
+    top: -16px;
+    font-weight:600;
+
+}
+
+.mood_space_flex {
+    display:flex;
+   justify-content: space-around;
+}
+
+.spacer {
+    width:100%;
+}
+
+.mood_flex {
+    flex-direction:column;
+    display:flex;
+    align-items:flex-end;
+}
+
+.hl_flex {
+    display:flex;
+    height:100%;
+    align-items:center;
+    justify-content:space-around;
+
+}
+
+.hl_title {
+    font-family:'Alegreya Sans';
+    font-size:58px;
+    font-weight:700;
+}
+
+.hl_back {
+    background:#80808005;
+    border-radius:10px;
+}
+
+.box_title {
+    text-decoration:none;
+}
+
+.box_title:visited {
+    color:black;
+}
+
+.box_title:hover {
+ 
+   
+}
+
+.feature {
+   
+    height:150px;
+    border-radius:5px;
+
+}
+
+.feature_flex {
+      display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+}
+
+.f_title {
+    font-size:25px;
+    font-family:'Alegreya Sans';
+    font-weight:600;
+}
+
+.m_font {
+    font-family:'Montserrat';
+}
+
+.header_container {
+    width:100%;
+    display:flex;
+justify-content: space-between;
+    align-items: center;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.name_prof {
+    display:flex;
+    flex-direction:column;
+}
+
+.name {
+    font-size:48px;
+    font-family:'Josefin Sans';
+}
+
+.prof {
+    font-size:30px;
+    font-family:'Josefin Sans';
+    font-weight:300;
+}
+
+.email {
+    font-size:20px;
+    font-family:'Josefin Sans';
+    font-weight:300;
+}
+
+body {
+    width:1000px;
+    margin:auto;
+}
+
+.main_flex {
+    display:flex;
+    width:100%;
+}
+</style> 
+
+</head>
+
+<body>
+
+<div class='header_container'>
+<div class='name_prof'>
+<div class='name'>
+David Brosnan
+</div>
+<div class='prof'>
+Django/Python Full Stack Developer
+</div>
+
+</div>
+
+<div class='email'>
+davidwbrosnan@gmail.com
+</div>
+</div>
+
+<div class='main_flex'>
+<div class='over_grid'>
+<div class='half_grid'>
+
+<a class='box_title' href='https://www.hlcompare.com/' target="_blank">
+<div class='site_title hl_back'>
+<div class='hl_flex hl_back'>
+<div class='hl_title'>
+headline compare
+</div>
+</div>
+</div></a>
+<div class='site_markers'>
+
+
+
+
+
+</div>
+</div>
+
+<div class='half_grid'>
+
+<a class='box_title' href='https://mood.pythonanywhere.com/' target='_blank'>
+<div class='site_title mood_back'>
+<div class='mood_back'>
+<div class='mood_title_container'>
+
+<div class='mood_space_flex'>
+<div class='mood_flex'>
+<div class='mood_title'>mood
+</div>
+
+
+<div class='mood_subtitle'>
+spotify playlists
+</div>
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+</div>
+</a>
+<div class='site_markers'>
+
+</div>
+</div>
+
+
+
+</div>
+<div class='feature_flex'>
+<div class='feature'>
+<div class='f_title'>
+Design
+</div>
+</div>
+<div class='feature'>
+<div class='f_title'>
+CSS
+</div>
+</div>
+
+<div class='feature'>
+<div class='f_title'>
+JavaScript/JQuery
+</div>
+</div>
+
+<div class='feature'>
+<div class='f_title'>
+Database
+</div>
+
+</div>
+<div class='feature'>
+<div class='f_title'>
+Scripting
+</div>
+
+</div>
+<div class='feature'>
+<div class='f_title'>
+Cacheing
+</div>
+
+</div>
+<div class='feature'>
+<div class='f_title'>
+Plotly
+</div>
+
+</div>
+<div class='feature'>
+<div class='f_title'>
+Django
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<div id='mouse_head' class='first_back_opaque'>
+<div class='first_flex'>
+<div class='name_prof_flex'>
+<div class='name'>
+David Brosnan
+</div>
+<div class='prof'>
+Full Stack Developer Django/Python
+</div>
+</div>
+
+
+
+
+</div>
+</div>
