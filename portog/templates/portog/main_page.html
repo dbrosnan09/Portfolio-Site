@@ -1,11 +1,15 @@
 
-{% load staticfiles %}
+{% load static %}
 <!doctype html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="{% static 'db.png' %}"/>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 <style>
 
 .header {
@@ -45,7 +49,7 @@ body {
 
 transition:1s;
   background:#006bc7;
-    
+
 
 }
 
@@ -59,7 +63,7 @@ transition:1s;
 
 transition:1s;
   background:#006bc7;
-    
+
 
 }
 
@@ -72,7 +76,7 @@ transition:1s;
 
 transition:1s;
   background:#006bc7;
-    
+
 
 }
 
@@ -86,7 +90,7 @@ transition:1s;
 width:100%;
 transition:1s;
   background:#006bc7;
-    
+
 
 }
 
@@ -100,7 +104,7 @@ transition:1s;
 width:100%;
 transition:1s;
   background:#006bc7;
-    
+
 
 }
 
@@ -113,7 +117,7 @@ transition:1s;
 width:100%;
 transition:1s;
   background:#006bc7;
-    
+
 
 }
 
@@ -166,7 +170,7 @@ width:50%;
 }
 
 .name {
-    
+
      font-size: max(7vw, 30px);
     font-weight: 500;
 
@@ -213,7 +217,7 @@ width:50%;
     position:absolute;
 
        background: #f7f7f7;
-   
+
     transition:.45s;
     opacity:0;
             background: linear-gradient(
@@ -226,7 +230,7 @@ width:50%;
     height:100%;
     top:0;
     padding-top:63px;
-    
+
 }
 
 .hc_box:hover {
@@ -239,7 +243,7 @@ width:50%;
 .mood_box:hover {
     box-shadow:  0 0 3px grey;
       transform: scale(1.02);
-  
+
 }
 
 .spacer_2 {
@@ -276,7 +280,7 @@ width:50%;
   flex-direction:column;
   font-family:'Montserrat';
   color:white;
-  
+
 }
 
 .hl_title_box {
@@ -316,7 +320,7 @@ width:50%;
 
 
     .prof_select_back {
-      height:calc(100vh - 63px);
+      height:100%;
       background:#f7f7f7;
       min-height:480px;
     }
@@ -324,29 +328,31 @@ width:50%;
 
 
         .mood_back {
-     
-               background: linear-gradient( 
+
+               background: linear-gradient(
 147deg
  , #FF0146 38%, #d5fd75 109%);
  opacity:1;
  transition:2s;
- 
+
     }
-    
+
 .hl_back {
     background:white;
 }
 
     .prof_select_flex {
       display:flex;
-      height:calc(100vh - 63px);
+      height:100%;
       width:100%;
       justify-content:space-around;
       align-items:center;
       flex-wrap:wrap;
       min-height:480px;
+      padding-top:100px;
+      padding-bottom:100px;
     }
-    
+
     .hc_box {
       width:100%;
       height: 35vh;
@@ -364,16 +370,28 @@ width:50%;
 
 
 .vid_fit {
-  
+
 }
 
 
-  
+
     .hc_text {
       font-size:5vw;
       font-family:'Alegreya Sans';
       font-weight:600;
     }
+
+
+
+        .rk_text {
+      font-size:60px;
+      font-family:'Raleway';
+      font-weight:700;
+      border-bottom:5px solid black;
+      line-height:80px;
+    }
+
+
     .mood_box {
       flex-basis:40%;
       height: 35vh;
@@ -413,9 +431,9 @@ width:50%;
 }
 
 .mood_pad {
- 
+
     width:214px;
-    padding-top:40px;
+    padding-top:80px;
 
 }
 
@@ -436,14 +454,14 @@ width:50%;
     max-width:1000px;
     margin:auto;
     transition:2s;
-    
+
 
 }
 
 
 .mm_flex {
     display:flex;
- 
+
 flex-direction:row;
 flex-wrap:wrap;
     align-items: center;
@@ -467,8 +485,8 @@ flex-wrap:wrap;
 .exp {
 padding-top:50px;
 
-  
-    
+
+
 }
 
 
@@ -496,7 +514,7 @@ padding-top:50px;
 
 .mm_half_text {
     width:100%;
-  
+
     display:flex;
     align-items: center;
     flex-direction:column;
@@ -526,12 +544,12 @@ padding-top:50px;
 .hl_head{
     font-family:'Alegreya Sans';
         font-size: 50px;
-    padding-top: 50px;
+    padding-top: 90px;
     white-space: nowrap;
   overflow: hidden;
-  
+
    width:0;
-  
+
 }
 
 @keyframes typing {
@@ -549,7 +567,7 @@ padding-top:50px;
 
 .hl_pic {
     align-self:center;
-        
+
 }
 
 .hl_pic_img {
@@ -561,7 +579,7 @@ padding-top:50px;
 }
 
 .contact_back {
-   background: linear-gradient( 
+   background: linear-gradient(
 682deg
  , #ece659 -12%, #006bc7 71%);
 }
@@ -590,11 +608,13 @@ padding-top:50px;
 }
 
 .contact_flex {
-  
+
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    margin-right:40px;
+    margin-left:40px;
 
 }
 
@@ -612,6 +632,7 @@ display: flex;
     font-size:70px;
     font-family:'Alegreya Sans';
     font-weight:600;
+    line-height:58px;
 }
 
 .profession {
@@ -745,21 +766,44 @@ animation: blinked .5s infinite;
     .hc_text {
     font-size:64px;
   }
-  
+
+
+
 }
-    
+
       @media only screen and (max-height: 480px) {
     .titler {
     position:static;
       padding-top:30px;
   }
-  
+
+}
+
+
+
+
+}
+
+
+
+
+      @media only screen and (max-height: 480px) {
+    .titler {
+    position:static;
+      padding-top:30px;
+  }
+
 }
 
 
 
 
 }
+
+
+
+
+
 @media screen and (min-width: 1190px) {
   .name {
      font-size: 85px;
@@ -786,6 +830,8 @@ animation: blinked .5s infinite;
 }
 .feature_line {
     padding:14px;
+    width:100%;
+    font-size:17px;
 }
 }
 
@@ -798,7 +844,8 @@ animation: blinked .5s infinite;
 }
 
 .hl_back_container {
-    margin:40px;
+    margin-right:40px;
+    margin-left:40px;
 }
 
 .hl_flex {
@@ -806,7 +853,7 @@ animation: blinked .5s infinite;
 }
 
 .mm_flex {
-    padding-bottom:70px;
+    padding-bottom:100px;
 }
 
 
@@ -815,7 +862,9 @@ animation: blinked .5s infinite;
     width:100%;
 }
 
-
+.hlf {
+    font-size:19px;
+}
 
 
 }
@@ -872,7 +921,7 @@ video {
     .bio {
     font-size:16px;
   }
-  
+
 }
 @media screen and (max-width: 1050px) {
   .name {
@@ -911,7 +960,7 @@ video {
   .first_back_vid {
 
   }
- 
+
 
   .mood_box {
       width:310px;
@@ -930,6 +979,10 @@ video {
 
 
   .hc_text {
+      font-size:40px;
+  }
+
+ .rk_text {
       font-size:40px;
   }
 
@@ -989,9 +1042,7 @@ font-size:19px;
       padding-bottom:40px;
   }
 
-  .name_cont {
-      line-height:54px;
-  }
+
 
   .email_flex {
       padding-bottom:32px;
@@ -999,7 +1050,46 @@ font-size:19px;
 }
 
 
+    @media only screen and (max-width: 1350px) {
 
+
+      .rk_text {
+    font-size:52px;
+    text-align:center;
+  }
+
+}
+
+
+
+.rk {
+    font-family:'Raleway';
+}
+
+.rk_head {
+    font-weight:700;
+    font-size:54px;
+    margin-top:87px;
+    border-bottom:5px solid black;
+    line-height:80px;
+}
+
+
+.rk_sub {
+    font-size:16px;
+}
+
+.rk_f {
+    font-size:15px;
+}
+.rk_back {
+    border-top:5px solid black;
+}
+
+.rk_pic {
+    border:5px solid black;
+    border-radius:0px;
+}
 </style>
 
 </head>
@@ -1043,7 +1133,7 @@ $(window).scroll(function() {
     var bottom_of_element = $("#mood_cont").offset().top + $("#mood_cont").outerHeight();
     var top_of_screen = $(window).scrollTop();
     var bottom_of_screen = top_of_screen + $(window).height() - $(window).height()/4;
-    
+
 
     if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
         $('.mood_back_container').css('opacity',1)
@@ -1071,7 +1161,7 @@ $(window).scroll(function() {
     var bottom_of_element = $("#hl_title").offset().top + $("#hl_title").outerHeight();
     var top_of_screen = $(window).scrollTop();
     var bottom_of_screen = top_of_screen + $(window).height() - $(window).height()/4;
-    
+
 
     if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
         $('.hl_head').css('animation',"typing 3.5s steps(40, end)")
@@ -1165,7 +1255,7 @@ David Brosnan
 Full Stack Developer Django/Python
 </div>
 <div class='bio black'>
-Hi, my name is Dave. I learned to code analyzing Russian newspapers in grad school (привет!). I'm fascinated by language, music and design. Check out my sites <a href='https://mood.pythonanywhere.com' target="_blank">mood</a> and <a href='https://www.hlcompare.com' target="_blank">headline compare</a>, which I built with Python, Django, JavaScript, jQuery, PostgreSQL, APIs and custom scrapers. 
+Hi, my name is Dave. I learned to code analyzing Russian newspapers in grad school (привет!). I'm fascinated by language, music and design. Check out my sites <a href='https://mood.pythonanywhere.com' target="_blank">mood</a> and <a href='https://www.hlcompare.com' target="_blank">headline compare</a>, which I built with Python, Django, JavaScript, jQuery, PostgreSQL, APIs and custom scrapers.
 </div>
 </div>
 
@@ -1182,7 +1272,7 @@ David Brosnan
 <div class='prof'>
 Full Stack Developer Django/Python
 </div><div class='bio'>
-Hi, my name is Dave. I learned to code analyzing Russian newspapers in grad school (привет!). I'm fascinated by language, music and design. Check out my sites <a href='https://mood.pythonanywhere.com'>mood</a> and <a href='https://www.hlcompare.com'>headline compare</a>, which I built with Python, Django, JavaScript, jQuery, PostgreSQL, APIs and custom scrapers. 
+Hi, my name is Dave. I learned to code analyzing Russian newspapers in grad school (привет!). I'm fascinated by language, music and design. Check out my sites <a href='https://mood.pythonanywhere.com'>mood</a> and <a href='https://www.hlcompare.com'>headline compare</a>, which I built with Python, Django, JavaScript, jQuery, PostgreSQL, APIs and custom scrapers.
 </div>
 </div>
 
@@ -1228,9 +1318,13 @@ Hi, my name is Dave. I learned to code analyzing Russian newspapers in grad scho
             headline compare
           </div>
           </div></a>
-        
 
-        
+        <a href='https://russianclassics.pythonanywhere.com'><div class='hc_box'>
+          <div class='rk_text'>
+Русская классика          </div>
+          </div></a>
+
+
       </div>
     </div>
 
@@ -1251,7 +1345,7 @@ Hi, my name is Dave. I learned to code analyzing Russian newspapers in grad scho
             <div class='mm_half'>
             <div class='pic_half'>
             <img src="{% static 'mood_shot.png' %}" class='pic_exp'>
-     
+
             </div>
                 <div class='mm_half_text'>
                 <div class='feature_line'><div class='bold'>API</div> server and client authentication, artist picture, track fetching and playlist creation through Spotify API
@@ -1280,18 +1374,18 @@ Hi, my name is Dave. I learned to code analyzing Russian newspapers in grad scho
 
 <div class='hl_back'>
           <div class='hl_back_container'>
-         
+
               <a href='https://www.hlcompare.com' target="_blank"><div id='hl_title' class='mood_titler mood_head hl_head'>
                    headline compare</div></a>
-            
-            
+
+
               <div class='exp mood_text hl_text'>
 Visually compare newspaper headlines. Based on a custom scraper feeding databases powering hundreds of scripted graphs and tables.            </div>
             <div class='mm_flex hl_flex'>
             <div class='mm_half hl_half'>
             <div class='pic_half hl_pic'>
             <img src="{% static 'hl_main.png' %}" class='pic_exp hl_pic_img'>
-     
+
             </div>
                 <div class='mm_half_text hl_half_text'>
                 <div class='feature_line hlf'><div class='bold'>Plotly</div> automated generation and styling of hundreds of Plotly graphs
@@ -1312,6 +1406,48 @@ Visually compare newspaper headlines. Based on a custom scraper feeding database
 
 
 </div>
+
+
+
+
+<div class='hl_back rk_back'>
+          <div class='hl_back_container'>
+
+              <a href='https://russianclassics.pythonanywhere.com' target="_blank"><div id='hl_title' class='mood_titler mood_head rk rk_head'>
+                   Русская классика</div></a>
+
+
+              <div class='exp mood_text hl_text rk rk_sub'>
+Click-to-translate Russian Classics.          </div>
+            <div class='mm_flex hl_flex'>
+            <div class='mm_half hl_half'>
+            <div class='pic_half hl_pic'>
+            <img src="{% static 'chelovek.png' %}" class='pic_exp hl_pic_img rk_pic'>
+
+            </div>
+                <div class='mm_half_text hl_half_text'>
+                <div class='feature_line hlf rk rk_f'><div class='bold'>API/JSON</div> context-sensitive API calls to Wiktionary, providing parts of speech and declension when appropriate
+</div>
+                <div class='feature_line hlf rk rk_f'><div class='bold'>JavaScript/JQuery/AJAX</div> touch to translate through asynchronous server calls and JavaScript formatting</div>
+                                <div class='feature_line hlf rk rk_f'><div class='bold'>Scripting/Regex</div>texts prepped using regex to identify and html span Russian words</div>
+
+
+            </div>
+            </div>
+
+
+
+
+          </div>
+</div>
+
+
+</div>
+
+
+
+
+
 
 
 <div id='contact' class='contact_back'>
@@ -1335,21 +1471,21 @@ Visually compare newspaper headlines. Based on a custom scraper feeding database
 
 
 
-     
+
 </body>
 
 
 
     <script>
 
-   
-     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
+
+     if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 )
     {
-       
+
     }
     else if(navigator.userAgent.indexOf("Chrome") != -1 )
     {
-       
+
     }
     else if(navigator.userAgent.indexOf("Safari") != -1)
     {
@@ -1357,18 +1493,18 @@ Visually compare newspaper headlines. Based on a custom scraper feeding database
         console.log("got it")
   element.classList.add("turn_off");
     }
-    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
+    else if(navigator.userAgent.indexOf("Firefox") != -1 )
     {
-  
+
     }
     else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
     {
-   
-    }  
-    else 
-    {
-    
+
     }
-    
+    else
+    {
+
+    }
+
     </script>
 </html>
