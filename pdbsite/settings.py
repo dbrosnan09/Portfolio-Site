@@ -25,7 +25,7 @@ SECRET_KEY = 'ar-j&5v0axuk4*iqqa$+fy9ofdc-stgqc3u%b%9tq*oay7r=gd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com' ]
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'www.davidbrosnancodes.com' ]
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'portog.apps'
+    'portog.apps',
+    'django_bootstrap_icons',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-        'django.middleware.byterange.RangesMiddleware',
+
 
 ]
 
@@ -121,4 +122,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home/davidwbrosnan/pdb/static'
