@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -350,6 +351,7 @@ width:50%;
 
 .hl_back {
     background:white;
+    border-bottom:5px solid black;
 }
 
     .prof_select_flex {
@@ -463,6 +465,14 @@ border: 1px solid black;
 
 }
 
+.sifo_back_container {
+    max-width:1000px;
+    margin:auto;
+    transition:1s;
+    opacity:0;
+
+}
+
 .hl_back_container {
     max-width:1000px;
     margin:auto;
@@ -514,8 +524,8 @@ padding-top:50px;
 .hl_text {
     font-family:'Alegreya Sans';
     color:black;
-    font-size:19px;
-    font-weight:400;
+    font-size:20px;
+    font-weight:500;
 }
 
 .mm_half {
@@ -863,6 +873,12 @@ animation: blinked .5s infinite;
     margin-left:40px;
 }
 
+.sifo_back_container {
+    margin-right:40px;
+    margin-left:40px;
+}
+
+
 .hl_flex {
     height:100%;
 }
@@ -945,6 +961,39 @@ video {
     height:40%;
 }
 
+
+}
+
+
+@media screen and (max-width: 560px) {
+.logo1 {
+    font-size:9vw!important;
+}
+
+.logo2 {
+    font-size:9vw!important;
+}
+
+.sifo_pad {
+    width:80vw!important;
+}
+
+}
+
+
+
+@media screen and (max-width: 415px) {
+.logo1 {
+    font-size:8vw!important;
+}
+
+.logo2 {
+    font-size:8vw!important;
+}
+
+.sifo_pad {
+    width:80vw!important;
+}
 
 }
 
@@ -1117,7 +1166,7 @@ margin-top: -9px;
 
 
 .rk_sub {
-    font-size:16px;
+    font-size:19px;
 }
 
 .rk_f {
@@ -1128,8 +1177,7 @@ margin-top: -9px;
 }
 
 .rk_pic {
-    border:5px solid black;
-    border-radius:0px;
+ 
 }
 
 .icon_flex {
@@ -1147,6 +1195,68 @@ margin-top: -9px;
 }
 .name_prof_container {
 
+}
+
+.sifo_back {
+    background:white;
+    border-bottom:5px solid black;
+}
+
+    .logo1 {
+        display:inline-block;
+        border-radius:5px;
+        background:#43a0dc;
+        color:white;
+        padding:5px;
+        font-weight:700;
+        font-size:55px;
+    }
+    .logo2 {
+        display:inline-block;
+    display: inline-block;
+    font-weight: 600;
+    position: relative;
+    left: -10px;
+    color:black;
+    font-size:55px;
+}
+
+.sifo_title_box {
+    font-family:'Public Sans';
+    color:black;
+}
+
+.sifo_pad {
+    width:500px;
+}
+
+.sifo_text {
+    color:black;
+    font-family:'Public Sans';
+    font-weight:500;
+    font-size:19px;
+}
+
+#sifo_pic {
+     box-shadow: 0 0 2px grey;
+}
+
+.sifo_half_text {
+    color:black;
+    font-family:'Public Sans';
+    justify-content:space-between;
+}
+
+.sifo_line {
+    font-size:16px;
+}
+
+.mooder {
+        box-shadow: 0 0 2px grey;
+}
+
+.new {
+    font-size:4vw;
 }
 </style>
 
@@ -1201,7 +1311,31 @@ $(window).scroll(function() {
     }
 });
 
+
+$(window).scroll(function() {
+
+    if(scrollHandling.allow) {
+    var stop_of_element = $("#sifo_cont").offset().top;
+    var sbottom_of_element = $("#sifo_cont").offset().top + $("#sifo_cont").outerHeight();
+    var stop_of_screen = $(window).scrollTop();
+    var sbottom_of_screen = stop_of_screen + $(window).height() - $(window).height()/4;
+
+
+    if ((sbottom_of_screen > stop_of_element) && (stop_of_screen < sbottom_of_element)){
+        $('.sifo_back_container').css('opacity',1)
+    } else {
+        // the element is not visible, do something else
+    }
+    }
+});
+
 </script>
+
+
+
+
+
+
 <script>
 
 var scrollHandling = {
@@ -1248,14 +1382,12 @@ var scrollHandling = {
 
 $(window).scroll(function() {
       if(scrollHandling.allow) {
-    var top_of_portfolio = $("#mood_cont").offset().top;
+    var top_of_portfolio = $("#sifo_cont").offset().top;
     var top_of_contact = $("#contact").offset().top;
 
     var top_of_screen = $(window).scrollTop();
     var bottom_of_screen = top_of_screen + $(window).height() - $(window).height()/4;
-    console.log("Bottom of screen is" + bottom_of_screen)
-    console.log("Top of portfolio is" + top_of_portfolio)
-    console.log("Top of contact is " + top_of_contact);
+
 
     if (bottom_of_screen < top_of_portfolio){
             $('.home_ul').addClass('home_ul_underline')
@@ -1296,7 +1428,7 @@ window.addEventListener("hashchange", function () {
 <a href='#home_point'>Home</a>
 </div>
 <div id='port_underline' class='header_obj portfolio_ul'>
-<a href='#mood_cont'>Portfolio</a>
+<a href='#sifo_cont'>Portfolio</a>
 </div>
 <div id='contact_underline' class='header_obj contact_ul'>
 <a href='#contact'>Contact</a>
@@ -1320,7 +1452,7 @@ Dashboard Developer
 </div>
 <div class='bio black'>
 
-<p>Getting key information at your fingertips.</p> 
+
 <p>Tabbed, clean, responsive designs.</p> 
 <p>Asynchronous loading for scaleable, faster visualizations.</p>
 <p> Full stack development.</p>
@@ -1344,7 +1476,7 @@ Dashboard Developer</div><div class='icon_flex'>
 {% bs_icon 'bar-chart-fill' size='150px' %}
 {% bs_icon 'ui-checks' size='150px' %}
 </div><div class='bio'>
-Get the right information at your fingertips. Tabbed, clean, responsive designs. Asynchronous loading for scaleable, faster visualizations. Database development. Proficient in Django, Python, JS, JQuery, AJAX, HTML and CSS.     </div>
+Key information at your fingertips. Tabbed, clean, responsive designs. Asynchronous loading for scaleable, faster visualizations. Database development. Proficient in Django, Python, JS, JQuery, AJAX, HTML and CSS.     </div>
 </div>
 
 
@@ -1370,31 +1502,30 @@ Get the right information at your fingertips. Tabbed, clean, responsive designs.
 
 
 
-
-
-<div id='mood_cont' class='mood_back'>
-          <div class='mood_back_container'>
-            <a href='https://mood.pythonanywhere.com'><div class='mood_title_box mood_pad'>
+<div id='sifo_cont' class='mood_back sifo_back'>
+          <div class='sifo_back_container'>
+            <div class='mood_title_box mood_pad sifo_pad'>
               <div class='mood_titler mood_head'>
-                   mood</div>
-              <div class='mood_subtitle main_sub'>
-                spotify playlists
-              </div>
-            </div></a>
-              <div class='exp mood_text'>
-            Generate mood playlists (Loud, Quiet, High Tempo, Low Tempo, Popular…) by artist. Add to your Spotify with one click.
+                   <div class='logo1'>SIFO</div>
+                   <div class='logo2'>Dashboard</div>
+                   
+                   </div>
+  
+            </div>
+              <div class='exp mood_text sifo_text'>
+              Key performance indicators and years of data at your finger tips. 
             </div>
             <div class='mm_flex'>
             <div class='mm_half'>
             <div class='pic_half'>
-            <img src="{% static 'mood_shot.png' %}" class='pic_exp'>
+            <img id='sifo_pic' src="{% static 'sd.png' %}" class='pic_exp'>
 
             </div>
-                <div class='mm_half_text'>
-                <div class='feature_line'><div class='bold'>API</div> server and client authentication, artist picture, track fetching and playlist creation through Spotify API
+                <div class='mm_half_text sifo_half_text'>
+                <div class='feature_line sifo_line'><div class='bold'>AJAX</div> Asynchronous calls for instant access to hundreds of graphs without page loads
 </div>
-                <div class='feature_line'><div class='bold'>Scripting</div> automated song classification by mood using Spotify API track information</div>
-                                <div class='feature_line'><div class='bold'>Responsive Design</div> media query, jQuery and JavaScript powered</div>
+                <div class='feature_line sifo_line'><div class='bold'>Design</div>Quick, responsive, clean design; automated generation of JavaScript code for layered tab interface</div>
+                                <div class='feature_line sifo_line'><div class='bold'>Back End</div>Django/Python backend with a custom database; automated data reads from CRM database</div>
 
 
             </div>
@@ -1408,12 +1539,6 @@ Get the right information at your fingertips. Tabbed, clean, responsive designs.
 
 
 </div>
-
-
-
-
-
-
 
 <div class='hl_back'>
           <div class='hl_back_container'>
@@ -1449,6 +1574,51 @@ Visually compare newspaper headlines. Based on a custom scraper feeding database
 
 
 </div>
+
+<div id='mood_cont' class='mood_back'>
+          <div class='mood_back_container'>
+            <a href='https://mood.pythonanywhere.com'><div class='mood_title_box mood_pad'>
+              <div class='mood_titler mood_head'>
+                   mood</div>
+              <div class='mood_subtitle main_sub'>
+                spotify playlists
+              </div>
+            </div></a>
+              <div class='exp mood_text'>
+            Generate mood playlists (Loud, Quiet, High Tempo, Low Tempo, Popular…) by artist. Add to your Spotify with one click.
+            </div>
+            <div class='mm_flex'>
+            <div class='mm_half'>
+            <div class='pic_half'>
+            <img src="{% static 'mood_shot.png' %}" class='pic_exp mooder'>
+
+            </div>
+                <div class='mm_half_text'>
+                <div class='feature_line'><div class='bold'>API</div> server and client authentication, artist picture, track fetching and playlist creation through Spotify API
+</div>
+                <div class='feature_line'><div class='bold'>Scripting</div> automated song classification by mood using Spotify API track information</div>
+                                <div class='feature_line'><div class='bold'>Responsive Design</div> media query, jQuery and JavaScript powered</div>
+
+
+            </div>
+            </div>
+
+
+
+
+          </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1498,7 +1668,8 @@ Click-to-translate Russian Classics.          </div>
 <div class='contact_container'>
 <div class='contact_top'>
 <div class='name_cont'>David Brosnan</div>
-<div class='profession'>Full Stack Developer Python/Django</div></div>
+<div class='profession'>Dashboard Developer</div></div>
+<div class='new'>Django, Python, JavaScript, JQuery, AJAX, Plotly, PostgreSQL, MySQL, HTML, CSS</div>
 <div class='email_flex'><div class='email_cap'>Email</div><div class='email'><a href='mailto:davidwbrosnan@gmail.com'>davidwbrosnan@gmail.com</a></div></div>
 <div class='linked_in_flex'><div class='linked_in_cap'>LinkedIn</div><div class='linked_in'><a href='https://www.linkedin.com/in/david-brosnan-52235325/'>https://www.linkedin.com/in/david-brosnan-52235325/</a></div></div>
 </div>
@@ -1533,7 +1704,7 @@ Click-to-translate Russian Classics.          </div>
     else if(navigator.userAgent.indexOf("Safari") != -1)
     {
               var element = document.getElementById("vidder");
-        console.log("got it")
+        
   element.classList.add("turn_off");
     }
     else if(navigator.userAgent.indexOf("Firefox") != -1 )
