@@ -35,6 +35,7 @@ backdrop-filter: blur(7px);
     padding-bottom: 5px;
     position: relative;
     font-weight:500;
+      padding: 5px;
 
 }
 
@@ -84,6 +85,9 @@ transition:1s;
 
 }
 
+.notop {
+    opacity:1;
+}
 
 .portfolio_ul_underline:after {
       content: "";
@@ -211,7 +215,7 @@ width:50%;
 
 .first_back{
        background: #f7f7f7;
-    height: 100vh;
+
     transition:.45s;
     z-index:100;
 }
@@ -265,10 +269,11 @@ width:50%;
 
 .first_flex {
     display:flex;
-          height:calc(100vh - 63px);
+
     flex-direction:column;
     align-items:center;
-
+    padding-top: 80px;
+    padding-bottom: 96px;
 
 }
 .white {
@@ -465,6 +470,21 @@ border: 1px solid black;
 
 }
 
+.contact_back {
+
+    transition:1s;
+    opacity:0;
+
+}
+
+.r_back_container {
+    max-width:1000px;
+    margin:auto;
+    transition:1s;
+    opacity:0;
+
+}
+
 .sifo_back_container {
     max-width:1000px;
     margin:auto;
@@ -588,6 +608,12 @@ padding-top:50px;
     height:100%;
 }
 
+.header_obj:hover {
+        background: #8080801c;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .hl_pic {
     align-self:center;
 
@@ -602,6 +628,12 @@ padding-top:50px;
 }
 
 .contact_back {
+   background: linear-gradient(
+682deg
+ , #ece659 -12%, #006bc7 71%);
+}
+
+.contact_backer {
    background: linear-gradient(
 682deg
  , #ece659 -12%, #006bc7 71%);
@@ -635,7 +667,7 @@ padding-top:50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    height: 1000px;
     margin-right:40px;
     margin-left:40px;
 
@@ -705,7 +737,7 @@ display: flex;
 }
 
 .contact_back {
-          height:calc(100vh - 63px);
+
 
 }
 
@@ -765,6 +797,22 @@ align-items:flex-start;
 }
 
 
+
+.r_back_container a {
+    text-decoration:none;
+    color:black;
+}
+
+
+.r_back_container a:hover {
+    text-decoration:none;
+    color:black;
+}
+.r_back_container a:visited {
+    text-decoration:none;
+    color:black;
+}
+
 .blinker {
 color:transparent;
 background:white;
@@ -775,7 +823,7 @@ animation: blinked .5s infinite;
 .bio {
     font-family:'Alegreya Sans';
 
-    padding-top: 93px;
+
     font-size: 20px;
     line-height: 24px;
     display:flex;
@@ -867,6 +915,12 @@ animation: blinked .5s infinite;
        padding-left: 40px;
     padding-right: 40px;
 }
+
+.r_back_container {
+       padding-left: 40px;
+    padding-right: 40px;
+}
+
 
 .hl_back_container {
     margin-right:40px;
@@ -1117,6 +1171,11 @@ margin-top: -9px;
     font-weight:400;
 }
 
+.icon_flex {
+    padding-top:20px;
+    padding-bottom:15px;
+}
+
 
 }
 
@@ -1184,9 +1243,11 @@ margin-top: -9px;
  display: flex;
     flex-direction: row;
     position: relative;
-  padding-top:103px;
+
     justify-content: space-between;
     width:600px;
+    padding-top:85px;
+    padding-bottom:85px;
 }
 
 .bio p {
@@ -1258,6 +1319,11 @@ margin-top: -9px;
 .new {
     font-size:30px;
 }
+
+.stopper {
+    background:none;
+}
+
 </style>
 
 </head>
@@ -1310,6 +1376,43 @@ $(window).scroll(function() {
     }
     }
 });
+
+
+$(window).scroll(function() {
+
+    if(scrollHandling.allow) {
+    var rtop_of_element = $("#r_cont").offset().top;
+    var rbottom_of_element = $("#r_cont").offset().top + $("#r_cont").outerHeight();
+    var rtop_of_screen = $(window).scrollTop();
+    var rbottom_of_screen = rtop_of_screen + $(window).height() - $(window).height()/4;
+
+
+    if ((rbottom_of_screen > rtop_of_element) && (rtop_of_screen < rbottom_of_element)){
+        $('.r_back_container').css('opacity',1)
+    } else {
+        // the element is not visible, do something else
+    }
+    }
+});
+
+
+$(window).scroll(function() {
+
+    if(scrollHandling.allow) {
+    var ctop_of_element = $("#contact").offset().top;
+    var cbottom_of_element = $("#contact").offset().top + $("#contact").outerHeight();
+    var ctop_of_screen = $(window).scrollTop();
+    var cbottom_of_screen = ctop_of_screen + $(window).height() - $(window).height()/4;
+
+
+    if ((cbottom_of_screen > ctop_of_element) && (ctop_of_screen < cbottom_of_element)){
+        $('.contact_back').css('opacity',1)
+    } else {
+        // the element is not visible, do something else
+    }
+    }
+});
+
 
 
 $(window).scroll(function() {
@@ -1464,25 +1567,6 @@ Dashboard Developer
 
 </div>
 
-<div id='mouse_head' class='first_back_opaque'>
-<div class='first_flex'>
-<div class='name_prof_flex'>
-<div class='name'>
-David Brosnan
-</div>
-<div class='prof'>
-Dashboard Developer</div><div class='icon_flex'>
-{% bs_icon 'columns' size='150px' %}
-{% bs_icon 'bar-chart-fill' size='150px' %}
-{% bs_icon 'ui-checks' size='150px' %}
-</div><div class='bio'>
-Key information at your fingertips. Tabbed, clean, responsive designs. Asynchronous loading for scaleable, faster visualizations. Database development. Proficient in Django, Python, JS, JQuery, AJAX, HTML and CSS.     </div>
-</div>
-
-
-
-</div>
-</div>
 </div>
 
 
@@ -1623,8 +1707,8 @@ Visually compare newspaper headlines. Based on a custom scraper feeding database
 
 
 
-<div class='hl_back rk_back'>
-          <div class='hl_back_container'>
+<div class='hl_back rk_back' id='r_cont'>
+          <div class='r_back_container'>
 
               <a href='https://russianclassics.pythonanywhere.com' target="_blank"><div id='hl_title' class='mood_titler mood_head rk rk_head'>
                    Русская классика</div></a>
@@ -1663,7 +1747,8 @@ Click-to-translate Russian Classics.          </div>
 
 
 
-<div id='contact' class='contact_back'>
+<div id='contact' class='contact_backer notop'>
+ <div class='contact_back stopper'>
 <div class='contact_flex'>
 <div class='contact_container'>
 <div class='contact_top'>
@@ -1674,7 +1759,7 @@ Click-to-translate Russian Classics.          </div>
 <div class='linked_in_flex'><div class='linked_in_cap'>LinkedIn</div><div class='linked_in'><a href='https://www.linkedin.com/in/david-brosnan-52235325/'>https://www.linkedin.com/in/david-brosnan-52235325/</a></div></div>
 </div>
 </div>
-
+</div>
 
 </div>
 
